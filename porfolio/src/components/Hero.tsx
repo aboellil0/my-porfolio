@@ -34,7 +34,7 @@ const Hero = () => {
         {/* Node.js Muscular Mascot - Left Side */}
         <div className="relative animate-fade-in-left group">
           <img 
-            src="../images/node1.png" 
+            src="../images/left.png" 
             alt="Node.js Muscular Fighting Mascot" 
             className="w-72 h-72 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] opacity-90 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110 object-contain 
             drop-shadow-[0_0_50px_rgba(0,0,0,0.9)] 
@@ -53,17 +53,12 @@ const Hero = () => {
           
           {/* Muscle Flex Effect */}
           <div className="absolute -inset-12 bg-gradient-to-r from-green-500/25 to-transparent rounded-full blur-xl animate-spin-slow -z-40"></div>
-          
-          {/* Power Level Indicator */}
-          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-green-400 font-bold text-lg animate-pulse">
-            💪 NODE.JS POWER: 9000+
-          </div>
         </div>
         
         {/* .NET Muscular Mascot - Right Side */}
         <div className="relative animate-fade-in-right group">
           <img 
-            src="../images/net1.png" 
+            src="../images/right.png" 
             alt=".NET Muscular Fighting Mascot" 
             className="w-72 h-72 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] opacity-90 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110 object-contain 
             drop-shadow-[0_0_50px_rgba(0,0,0,0.9)] 
@@ -82,11 +77,6 @@ const Hero = () => {
           
           {/* Weightlifting Aura Effect */}
           <div className="absolute -inset-12 bg-gradient-to-l from-purple-500/25 to-transparent rounded-full blur-xl animate-spin-slow -z-40"></div>
-          
-          {/* Power Level Indicator */}
-          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-purple-400 font-bold text-lg animate-pulse">
-            🏋️ .NET POWER: 8999+
-          </div>
         </div>
       </div>
 
