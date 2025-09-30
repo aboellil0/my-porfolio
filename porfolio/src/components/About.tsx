@@ -113,10 +113,10 @@ const About = () => {
               </div>
               
               <div className="flex items-center space-x-6 pt-6">
-                <a href="#" className="p-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-full hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl group">
+                <a href="https://www.linkedin.com/in/mohammed-aboellil-628360296/" target="_blank" rel="noopener noreferrer" className="p-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-full hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl group">
                   <Linkedin className="h-6 w-6 group-hover:animate-bounce" />
                 </a>
-                <a href="#" className="p-4 bg-gradient-to-r from-dark-700 to-dark-800 text-white rounded-full hover:from-dark-800 hover:to-dark-900 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl group">
+                <a href="https://github.com/aboellil0" target="_blank" rel="noopener noreferrer" className="p-4 bg-gradient-to-r from-dark-700 to-dark-800 text-white rounded-full hover:from-dark-800 hover:to-dark-900 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl group">
                   <Github className="h-6 w-6 group-hover:animate-bounce" />
                 </a>
               </div>

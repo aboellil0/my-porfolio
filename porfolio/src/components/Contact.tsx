@@ -133,13 +133,17 @@ const Contact = () => {
               <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/mohammed-aboellil-628360296/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="p-3 bg-white/10 dark:bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/20 dark:hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
                 >
                   <Linkedin className="h-6 w-6 text-white" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://github.com/aboellil0" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="p-3 bg-white/10 dark:bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/20 dark:hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
                 >
                   <Github className="h-6 w-6 text-white" />
