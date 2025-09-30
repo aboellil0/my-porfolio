@@ -94,8 +94,8 @@ const Projects = () => {
         { icon: <Zap className="h-5 w-5" />, title: "Real-time Features", description: "Live typing indicators, message delivery status, and emoji reactions" }
       ],
       gradient: "from-purple-700 to-pink-600",
-      image: "/images/net5.png",
-      contentBgImage: "../images/node3.png",
+      image: "/images/netnode.png",
+      contentBgImage: "../images/netnode.png",
       modalImages: ["/images/net5.png", "/images/node3.png", "/images/node4.png"],
       projectType: "Real-time Communication App",
       duration: "2.5 months",
