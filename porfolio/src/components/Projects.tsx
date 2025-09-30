@@ -21,7 +21,7 @@ const Projects = () => {
         { icon: <Shield className="h-5 w-5" />, title: "Secure Authentication", description: "JWT/OAuth implementation with refresh tokens and session management" },
         { icon: <Package className="h-5 w-5" />, title: "Docker Containerization", description: "Fully containerized application for easy deployment and scaling across different environments" }
       ],
-      gradient: "from-primary-500 to-accent-500",
+      gradient: "from-green-500 to-emerald-600",
       image: "/images/node1.png",
       contentBgImage: "../images/node2.png",
       modalImages: ["/images/node1.png", "/images/node2.png", "/images/node3.png"],
@@ -29,7 +29,8 @@ const Projects = () => {
       duration: "3 months",
       role: "Lead Full-Stack Developer",
       challenges: "Implementing secure multi-role authentication, optimizing real-time performance, and ensuring scalability for growing user base.",
-      achievements: "Successfully deployed to production with 99.9% uptime, serving over 500 active users with real-time synchronization."
+      achievements: "Successfully deployed to production with 99.9% uptime, serving over 500 active users with real-time synchronization.",
+      mascotTheme: "node"
     },
     {
       title: "Service Booking System",
@@ -44,7 +45,7 @@ const Projects = () => {
         { icon: <Zap className="h-5 w-5" />, title: "Real-time Updates", description: "Live status updates using SignalR for booking progress and notifications" },
         { icon: <Calendar className="h-5 w-5" />, title: "Smart Scheduling", description: "Intelligent booking system with conflict detection and automatic assignment" }
       ],
-      gradient: "from-accent-500 to-primary-600",
+      gradient: "from-purple-500 to-violet-600",
       image: "/images/net1.png",
       contentBgImage: "../images/net5.png",
       modalImages: ["/images/net1.png", "/images/net2.png", "/images/net5.png"],
@@ -52,7 +53,8 @@ const Projects = () => {
       duration: "4 months",
       role: "Backend Developer",
       challenges: "Complex booking algorithms, real-time synchronization across multiple user types, and performance optimization for concurrent users.",
-      achievements: "Reduced booking processing time by 60% and improved customer satisfaction with real-time status updates."
+      achievements: "Reduced booking processing time by 60% and improved customer satisfaction with real-time status updates.",
+      mascotTheme: "net"
     },
     {
       title: "Event Booking System",
@@ -67,7 +69,7 @@ const Projects = () => {
         { icon: <Users className="h-5 w-5" />, title: "Interactive Blazor UI", description: "Rich client-side experience with server-side rendering and real-time updates" },
         { icon: <Calendar className="h-5 w-5" />, title: "Event Management", description: "Complete event lifecycle management from creation to post-event analytics" }
       ],
-      gradient: "from-primary-600 to-accent-500",
+      gradient: "from-purple-600 to-indigo-600",
       image: "/images/net3.png",
       contentBgImage: "../images/net4.png",
       modalImages: ["/images/net3.png", "/images/net4.png", "/images/net2.png"],
@@ -75,7 +77,8 @@ const Projects = () => {
       duration: "2 months",
       role: "Full-Stack Developer",
       challenges: "Implementing Clean Architecture patterns, complex event scheduling logic, and ensuring smooth Blazor-API integration.",
-      achievements: "Created a highly maintainable codebase with 95% test coverage and seamless user experience."
+      achievements: "Created a highly maintainable codebase with 95% test coverage and seamless user experience.",
+      mascotTheme: "net"
     },
     {
       title: "Real-Time Chat Application",
@@ -90,7 +93,7 @@ const Projects = () => {
         { icon: <Package className="h-5 w-5" />, title: "Media Sharing", description: "Photo and file sharing capabilities with automatic compression and preview generation" },
         { icon: <Zap className="h-5 w-5" />, title: "Real-time Features", description: "Live typing indicators, message delivery status, and emoji reactions" }
       ],
-      gradient: "from-accent-600 to-primary-500",
+      gradient: "from-purple-700 to-pink-600",
       image: "/images/net5.png",
       contentBgImage: "../images/node3.png",
       modalImages: ["/images/net5.png", "/images/node3.png", "/images/node4.png"],
@@ -98,7 +101,8 @@ const Projects = () => {
       duration: "2.5 months",
       role: "Full-Stack Developer",
       challenges: "Managing real-time connections at scale, implementing message encryption, and optimizing performance for large group chats.",
-      achievements: "Successfully handles 1000+ concurrent users with sub-100ms message delivery and 99.9% uptime."
+      achievements: "Successfully handles 1000+ concurrent users with sub-100ms message delivery and 99.9% uptime.",
+      mascotTheme: "net"
     },
     {
       title: "Entertainment Hub",
@@ -113,7 +117,7 @@ const Projects = () => {
         { icon: <Users className="h-5 w-5" />, title: "Responsive Design", description: "Mobile-first approach ensuring optimal experience across all device sizes" },
         { icon: <Package className="h-5 w-5" />, title: "Dynamic Loading", description: "Optimized content loading with lazy loading and infinite scroll capabilities" }
       ],
-      gradient: "from-primary-700 to-accent-600",
+      gradient: "from-green-600 to-teal-600",
       image: "/images/node4.png",
       contentBgImage: "../images/node5.png",
       modalImages: ["/images/node4.png", "/images/node5.png", "/images/node1.png"],
@@ -121,7 +125,8 @@ const Projects = () => {
       duration: "1.5 months",
       role: "Frontend Developer",
       challenges: "Managing multiple API integrations, optimizing performance with large datasets, and ensuring cross-browser compatibility.",
-      achievements: "Integrated 5+ APIs with 99% uptime, achieving 90+ Google PageSpeed score and supporting 10,000+ daily users."
+      achievements: "Integrated 5+ APIs with 99% uptime, achieving 90+ Google PageSpeed score and supporting 10,000+ daily users.",
+      mascotTheme: "node"
     },
     {
       title: "Inventory Management System",
@@ -136,15 +141,16 @@ const Projects = () => {
         { icon: <Users className="h-5 w-5" />, title: "Multi-user Support", description: "Role-based access control with concurrent user management and conflict resolution" },
         { icon: <Shield className="h-5 w-5" />, title: "Data Security", description: "Encrypted data storage with automated backups and audit trails" }
       ],
-      gradient: "from-accent-700 to-primary-600",
-      image: "/images/left-one.png",
+      gradient: "from-purple-800 to-blue-700",
+      image: "/images/net2.png",
       contentBgImage: "../images/net3.png",
-      modalImages: ["/images/left-one.png", "/images/net3.png", "/images/right-one.png"],
+      modalImages: ["/images/net2.png", "/images/net3.png", "/images/net4.png"],
       projectType: "Desktop Business Application",
       duration: "3 months",
       role: "Desktop Application Developer",
       challenges: "Complex inventory algorithms, database performance optimization, and creating intuitive desktop UI/UX.",
-      achievements: "Reduced inventory processing time by 75% and eliminated stock discrepancies through automated tracking."
+      achievements: "Reduced inventory processing time by 75% and eliminated stock discrepancies through automated tracking.",
+      mascotTheme: "net"
     }
   ];
 

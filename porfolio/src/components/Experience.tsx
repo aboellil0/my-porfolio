@@ -62,11 +62,24 @@ const Experience = () => {
   );
 
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-dark-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-dark-800 transition-colors duration-300 relative overflow-hidden">
+      {/* Battle arena background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-1/4 left-10 w-20 h-20">
+          <img src="../images/node4.png" alt="" className="w-full h-full object-contain filter grayscale animate-float" style={{animationDelay: '2s'}} />
+        </div>
+        <div className="absolute bottom-1/4 right-10 w-20 h-20">
+          <img src="../images/net3.png" alt="" className="w-full h-full object-contain filter grayscale animate-float" style={{animationDelay: '4s'}} />
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div ref={titleAnimation.ref} className={`text-center mb-16 ${titleAnimation.animationClasses}`}>
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-dark-800 dark:from-white to-primary-600 bg-clip-text text-transparent mb-4">Experience</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-500 mx-auto"></div>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-dark-800 dark:from-white to-primary-600 bg-clip-text text-transparent mb-4">⚔️ Battle Experience</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-500 mx-auto mb-4"></div>
+          <p className="text-lg text-gray-600 dark:text-dark-300">
+            💪 Proven victories in the development battlefield!
+          </p>
         </div>
 
         {/* Professional Experience */}

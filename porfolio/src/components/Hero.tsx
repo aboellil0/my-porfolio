@@ -10,56 +10,83 @@ const Hero = () => {
         <div className="absolute -bottom-8 left-20 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-float floating-orb"></div>
       </div>
 
-      {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Animated Grid Background with Battle-themed Pattern */}
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
+          backgroundImage: `
+            linear-gradient(rgba(147,51,234,0.3) 1px, transparent 1px), 
+            linear-gradient(90deg, rgba(59,130,246,0.3) 1px, transparent 1px),
+            radial-gradient(circle at 25% 50%, rgba(147,51,234,0.1) 0%, transparent 50%),
+            radial-gradient(circle at 75% 50%, rgba(59,130,246,0.1) 0%, transparent 50%)
+          `,
+          backgroundSize: '60px 60px, 60px 60px, 800px 800px, 800px 800px'
         }}></div>
       </div>
 
-      {/* Fighting Mascots Container */}
+      {/* Battle Energy Lines - Visual connection between mascots */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="w-full h-0.5 bg-gradient-to-r from-purple-500/50 via-red-500/70 to-blue-500/50 animate-pulse"></div>
+        <div className="absolute w-full h-0.5 bg-gradient-to-r from-purple-400/30 via-yellow-400/50 to-blue-400/30 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+      </div>
+
+      {/* Fighting Mascots Container with Enhanced Effects */}
       <div className="absolute inset-0 flex items-center justify-between px-4 md:px-16 lg:px-24 pointer-events-none">
-        {/* Node.js Mascot - Left Side */}
-        <div className="relative animate-fade-in-left">
+        {/* Node.js Muscular Mascot - Left Side */}
+        <div className="relative animate-fade-in-left group">
           <img 
-            src="../images/left-one.png" 
-            alt="Node.js Fighting Mascot" 
-            className="w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] opacity-80 hover:opacity-100 transition-all duration-300 transform hover:scale-110 object-contain 
-            drop-shadow-[0_0_35px_rgba(0,0,0,0.8)] 
-            drop-shadow-[0_0_60px_rgba(147,51,234,0.7)] 
-            drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]
-            hover:drop-shadow-[0_0_50px_rgba(147,51,234,1)] 
-            hover:drop-shadow-[0_0_80px_rgba(147,51,234,0.8)]
-            hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.8)]
-            filter brightness-110 contrast-110 animate-float"
+            src="../images/node1.png" 
+            alt="Node.js Muscular Fighting Mascot" 
+            className="w-72 h-72 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] opacity-90 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110 object-contain 
+            drop-shadow-[0_0_50px_rgba(0,0,0,0.9)] 
+            drop-shadow-[0_0_100px_rgba(34,197,94,0.9)] 
+            drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]
+            group-hover:drop-shadow-[0_0_70px_rgba(34,197,94,1)] 
+            group-hover:drop-shadow-[0_0_140px_rgba(34,197,94,1)]
+            group-hover:drop-shadow-[0_35px_70px_rgba(0,0,0,1)]
+            filter brightness-110 contrast-120 saturate-120 animate-float"
             style={{animationDelay: '1s'}}
           />
-          {/* Multiple layered glow effects */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
-          <div className="absolute inset-0 bg-purple-500/20 rounded-full blur-[60px] -z-20 animate-glow"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-purple-400/40 to-transparent rounded-full blur-2xl -z-30 scale-150"></div>
+          {/* Enhanced Multi-layered Glow Effects - Green Theme */}
+          <div className="absolute inset-0 bg-gradient-to-br from-green-400/50 via-emerald-500/40 to-green-600/50 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
+          <div className="absolute inset-0 bg-green-500/30 rounded-full blur-[100px] -z-20 animate-glow"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-green-300/60 via-emerald-400/40 to-transparent rounded-full blur-2xl -z-30 scale-150"></div>
+          
+          {/* Muscle Flex Effect */}
+          <div className="absolute -inset-12 bg-gradient-to-r from-green-500/25 to-transparent rounded-full blur-xl animate-spin-slow -z-40"></div>
+          
+          {/* Power Level Indicator */}
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-green-400 font-bold text-lg animate-pulse">
+            💪 NODE.JS POWER: 9000+
+          </div>
         </div>
         
-        {/* .NET Mascot - Right Side */}
-        <div className="relative animate-fade-in-right">
+        {/* .NET Muscular Mascot - Right Side */}
+        <div className="relative animate-fade-in-right group">
           <img 
-            src="../images/right-one.png" 
-            alt=".NET Fighting Mascot" 
-            className="w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] opacity-80 hover:opacity-100 transition-all duration-300 transform hover:scale-110 object-contain 
-            drop-shadow-[0_0_35px_rgba(0,0,0,0.8)] 
-            drop-shadow-[0_0_60px_rgba(59,130,246,0.7)] 
-            drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]
-            hover:drop-shadow-[0_0_50px_rgba(59,130,246,1)] 
-            hover:drop-shadow-[0_0_80px_rgba(59,130,246,0.8)]
-            hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.8)]
-            filter brightness-110 contrast-110 animate-float"
+            src="../images/net1.png" 
+            alt=".NET Muscular Fighting Mascot" 
+            className="w-72 h-72 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] opacity-90 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110 object-contain 
+            drop-shadow-[0_0_50px_rgba(0,0,0,0.9)] 
+            drop-shadow-[0_0_100px_rgba(147,51,234,0.9)] 
+            drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]
+            group-hover:drop-shadow-[0_0_70px_rgba(147,51,234,1)] 
+            group-hover:drop-shadow-[0_0_140px_rgba(147,51,234,1)]
+            group-hover:drop-shadow-[0_35px_70px_rgba(0,0,0,1)]
+            filter brightness-110 contrast-120 saturate-120 animate-float"
             style={{animationDelay: '1.5s'}}
           />
-          {/* Multiple layered glow effects */}
-          <div className="absolute inset-0 bg-gradient-to-l from-blue-600/30 to-purple-600/30 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
-          <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-[60px] -z-20 animate-glow"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-blue-400/40 to-transparent rounded-full blur-2xl -z-30 scale-150"></div>
+          {/* Enhanced Multi-layered Glow Effects - Purple Theme */}
+          <div className="absolute inset-0 bg-gradient-to-bl from-purple-400/50 via-violet-500/40 to-purple-600/50 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
+          <div className="absolute inset-0 bg-purple-500/30 rounded-full blur-[100px] -z-20 animate-glow"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-purple-300/60 via-violet-400/40 to-transparent rounded-full blur-2xl -z-30 scale-150"></div>
+          
+          {/* Weightlifting Aura Effect */}
+          <div className="absolute -inset-12 bg-gradient-to-l from-purple-500/25 to-transparent rounded-full blur-xl animate-spin-slow -z-40"></div>
+          
+          {/* Power Level Indicator */}
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-purple-400 font-bold text-lg animate-pulse">
+            🏋️ .NET POWER: 8999+
+          </div>
         </div>
       </div>
 
