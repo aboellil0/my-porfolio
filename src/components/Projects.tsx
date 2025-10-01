@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Database, MessageCircle, Calendar, Play, Package, Users, Zap, Shield } from 'lucide-react';
+import { ExternalLink, Github, Database, MessageCircle, Calendar, Play, Package, Users, Zap, Shield, BookOpen, Search } from 'lucide-react';
 import { useState } from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import ProjectModal from './ProjectModal';
@@ -23,14 +23,43 @@ const Projects = () => {
       ],
       gradient: "from-green-500 to-emerald-600",
       image: "/images/node1.png",
-      contentBgImage: "../images/node2.png",
-      modalImages: ["/images/node1.png", "/images/node2.png", "/images/node3.png"],
+      contentBgImage: "/images/node1.png",
+      modalImages: ["/images/quraan1.png", "/images/quraan2.png", "/images/quraan3.png"],
       projectType: "Full-Stack Web Application",
       duration: "3 months",
       role: "Lead Full-Stack Developer",
       challenges: "Implementing secure multi-role authentication, optimizing real-time performance, and ensuring scalability for growing user base.",
       achievements: "Successfully deployed to production with 99.9% uptime, serving over 500 active users with real-time synchronization.",
       mascotTheme: "node"
+    },
+    {
+      title: "Course Management System",
+      description: "A comprehensive web application for managing educational courses, enabling instructors and students to interact seamlessly with full CRUD operations.",
+      detailedDescription: "A full-featured course management system built with ASP.NET MVC and Identity framework. The platform facilitates the complete learning lifecycle from course creation to student enrollment and progress tracking. Features include secure authentication, role-based access control for instructors and students, and comprehensive course management capabilities.",
+      technologies: ["ASP.NET MVC", "C#", "SQL Server", "ASP.NET Identity", "Entity Framework"],
+      icon: <BookOpen className="h-6 w-6" />,
+      features: ["Multi-role system (Instructors & Students)", "Secure authentication with Identity", "Complete CRUD operations", "Course enrollment management"],
+      detailedFeatures: [
+        { icon: <Users className="h-5 w-5" />, title: "Multi-Role System", description: "Separate interfaces and permissions for instructors and students with tailored dashboards and functionalities" },
+        { icon: <Shield className="h-5 w-5" />, title: "ASP.NET Identity Integration", description: "Secure user authentication and authorization using Microsoft's Identity framework with role management" },
+        { icon: <BookOpen className="h-5 w-5" />, title: "Course Management", description: "Complete CRUD operations for courses, allowing instructors to create, update, and manage educational content" },
+        { icon: <Calendar className="h-5 w-5" />, title: "Enrollment System", description: "Student enrollment management with progress tracking and course completion monitoring" }
+      ],
+      gradient: "from-purple-500 to-violet-600",
+      image: "/images/net1.png",
+      contentBgImage: "/images/net1.png",
+      modalImages: [
+        "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c807ac0cac3/Screenshot-2025-09-15-152739.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c807adc5c2d/Screenshot-2025-09-15-152739.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c807acd95d1/Screenshot-2025-09-15-152845.png"
+      ],
+      projectType: "Educational Web Platform",
+      duration: "2 months",
+      role: "Full-Stack Developer",
+      challenges: "Implementing role-based authorization, managing complex relationships between courses, instructors, and students, and ensuring data integrity across CRUD operations.",
+      achievements: "Successfully created a scalable course management system with secure authentication, supporting multiple concurrent users and comprehensive course lifecycle management.",
+      mascotTheme: "net",
+      githubUrl: "https://github.com/aboellil0/TeachingAndLearning"
     },
     {
       title: "Service Booking System",
@@ -45,9 +74,9 @@ const Projects = () => {
         { icon: <Zap className="h-5 w-5" />, title: "Real-time Updates", description: "Live status updates using SignalR for booking progress and notifications" },
         { icon: <Calendar className="h-5 w-5" />, title: "Smart Scheduling", description: "Intelligent booking system with conflict detection and automatic assignment" }
       ],
-      gradient: "from-purple-500 to-violet-600",
-      image: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c859ad79590/Screenshot-2025-09-15-205117.png",
-      contentBgImage: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c859ad79590/Screenshot-2025-09-15-205117.png",
+      gradient: "from-purple-600 to-indigo-600",
+      image: "/images/net2.png",
+      contentBgImage: "/images/net2.png",
       modalImages: [
         "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c859ad79590/Screenshot-2025-09-15-205117.png",
         "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c859ae7fd17/Screenshot-2025-09-15-212209.png",
@@ -74,9 +103,9 @@ const Projects = () => {
         { icon: <Users className="h-5 w-5" />, title: "Interactive Blazor UI", description: "Rich client-side experience with server-side rendering and real-time updates" },
         { icon: <Calendar className="h-5 w-5" />, title: "Event Management", description: "Complete event lifecycle management from creation to post-event analytics" }
       ],
-      gradient: "from-purple-600 to-indigo-600",
-      image: "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c8602c5ac90/Screenshot-2025-09-15-212859.png",
-      contentBgImage: "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c8602c5ac90/Screenshot-2025-09-15-212859.png",
+      gradient: "from-purple-700 to-violet-700",
+      image: "/images/net3.png",
+      contentBgImage: "/images/net3.png",
       modalImages: [
         "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c8602c5ac90/Screenshot-2025-09-15-212859.png",
         "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c8602b8b460/Screenshot-2025-09-15-213947.png",
@@ -104,8 +133,8 @@ const Projects = () => {
         { icon: <Zap className="h-5 w-5" />, title: "Real-time Features", description: "Live typing indicators, message delivery status, and emoji reactions" }
       ],
       gradient: "from-purple-700 to-pink-600",
-      image: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c86351ae955/Screenshot-2025-09-15-215529.png",
-      contentBgImage: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c86351ae955/Screenshot-2025-09-15-215529.png",
+      image: "/images/netnode.png",
+      contentBgImage: "/images/netnode.png",
       modalImages: [
         "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c86351ae955/Screenshot-2025-09-15-215529.png",
         "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c863521283a/Screenshot-2025-09-15-215812.png",
@@ -134,15 +163,20 @@ const Projects = () => {
         { icon: <Package className="h-5 w-5" />, title: "Dynamic Loading", description: "Optimized content loading with lazy loading and infinite scroll capabilities" }
       ],
       gradient: "from-green-600 to-teal-600",
-      image: "/images/node4.png",
-      contentBgImage: "../images/node5.png",
-      modalImages: ["/images/node4.png", "/images/node5.png", "/images/node1.png"],
+      image: "/images/node2.png",
+      contentBgImage: "/images/node2.png",
+      modalImages: [
+        "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c70f8b48773/screenshot-1757875754010.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c70f8bdd4de/screenshot-1757875783379.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c70f8c66a2e/Screenshot-2025-09-14-215315.png"
+      ],
       projectType: "Entertainment Web Application",
       duration: "1.5 months",
       role: "Frontend Developer",
       challenges: "Managing multiple API integrations, optimizing performance with large datasets, and ensuring cross-browser compatibility.",
       achievements: "Integrated 5+ APIs with 99% uptime, achieving 90+ Google PageSpeed score and supporting 10,000+ daily users.",
-      mascotTheme: "node"
+      mascotTheme: "node",
+      githubUrl: "https://github.com/aboellil0/IEEE-Super-App"
     },
     {
       title: "Inventory Management System",
@@ -157,16 +191,17 @@ const Projects = () => {
         { icon: <Users className="h-5 w-5" />, title: "Multi-user Support", description: "Role-based access control with concurrent user management and conflict resolution" },
         { icon: <Shield className="h-5 w-5" />, title: "Data Security", description: "Encrypted data storage with automated backups and audit trails" }
       ],
-      gradient: "from-purple-800 to-blue-700",
-      image: "/images/net2.png",
-      contentBgImage: "../images/net3.png",
-      modalImages: ["/images/net2.png", "/images/net3.png", "/images/net4.png"],
+      gradient: "from-purple-800 to-violet-800",
+      image: "/images/net4.png",
+      contentBgImage: "/images/net4.png",
+      modalImages: ["/images/invotory(1).png", "/images/invotory(2).png", "/images/invotory(3).png"],
       projectType: "Desktop Business Application",
       duration: "3 months",
       role: "Desktop Application Developer",
       challenges: "Complex inventory algorithms, database performance optimization, and creating intuitive desktop UI/UX.",
       achievements: "Reduced inventory processing time by 75% and eliminated stock discrepancies through automated tracking.",
-      mascotTheme: "net"
+      mascotTheme: "net",
+      githubUrl: "https://github.com/aboellil0/ProductManagement"
     },
     {
       title: "LadyAPI - Secure REST API with JWT",
@@ -181,9 +216,9 @@ const Projects = () => {
         { icon: <Package className="h-5 w-5" />, title: "Secure Endpoints", description: "Protected API routes with role-based authorization and middleware validation" },
         { icon: <Database className="h-5 w-5" />, title: "CRUD Operations", description: "Complete set of Create, Read, Update, Delete operations for testing authentication flows" }
       ],
-      gradient: "from-blue-600 to-cyan-600",
-      image: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c80bff5669a/Screenshot-2025-09-15-154844.png",
-      contentBgImage: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c80bff5669a/Screenshot-2025-09-15-154844.png",
+      gradient: "from-purple-600 to-indigo-700",
+      image: "/images/net5.png",
+      contentBgImage: "/images/net5.png",
       modalImages: [
         "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c80bff5669a/Screenshot-2025-09-15-154844.png",
         "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c80bff5669a/Screenshot-2025-09-15-154844.png",
@@ -196,6 +231,35 @@ const Projects = () => {
       achievements: "Created a production-ready authentication system following security best practices and OWASP guidelines.",
       mascotTheme: "net",
       githubUrl: "https://github.com/aboellil0/API-App"
+    },
+    {
+      title: "SEO Services Website",
+      description: "Professional website for SEO and digital marketing services with modern animated design, focusing on showcasing services and features with an organized, user-friendly layout.",
+      detailedDescription: "A professional website designed for a company offering SEO and digital marketing services. The project features modern design with animations and transitions to create a lively and interactive user experience. The main focus was on highlighting services, features, and website sections in an organized and easy-to-use manner.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "UI/UX Design"],
+      icon: <Search className="h-6 w-6" />,
+      features: ["Modern animations & transitions", "Responsive design", "Service showcase", "Interactive UI"],
+      detailedFeatures: [
+        { icon: <Zap className="h-5 w-5" />, title: "Modern Animations", description: "Smooth CSS animations and transitions that bring the website to life and enhance user engagement" },
+        { icon: <Users className="h-5 w-5" />, title: "Responsive Design", description: "Mobile-first responsive design ensuring optimal viewing experience across all devices" },
+        { icon: <Package className="h-5 w-5" />, title: "Service Showcase", description: "Well-organized sections highlighting SEO services, features, and company offerings" },
+        { icon: <Shield className="h-5 w-5" />, title: "UI/UX Excellence", description: "Professional UI/UX design with intuitive navigation and clear call-to-action elements" }
+      ],
+      gradient: "from-green-500 to-emerald-600",
+      image: "/images/node3.png",
+      contentBgImage: "/images/node3.png",
+      modalImages: [
+        "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c70ae3bbfaa/screenshot-1757873559349.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c70ae4260d6/screenshot-1757873613545.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c70ae45a90d/screenshot-1757873686575.png"
+      ],
+      projectType: "SEO Services Website",
+      duration: "1 month",
+      role: "Frontend Developer & UI/UX Designer",
+      challenges: "Creating engaging animations without compromising performance, ensuring consistent design across different sections, and implementing responsive layouts for various screen sizes.",
+      achievements: "Delivered a modern, professional website with smooth animations, achieving excellent user engagement and conversion rates. The design effectively showcases all services in an organized manner.",
+      mascotTheme: "node",
+      githubUrl: "https://github.com/aboellil0/SEO"
     }
   ];
 
