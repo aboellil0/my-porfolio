@@ -107,9 +107,9 @@ const Hero = () => {
       </div>
 
       {/* Fighting Mascots Container with Enhanced Effects */}
-      <div className="absolute inset-0 flex items-center justify-between px-4 md:px-16 lg:px-24 pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-between pointer-events-none">
         {/* Node.js Muscular Mascot - Left Side */}
-        <div className="relative animate-fade-in-left group">
+        <div className="relative animate-fade-in-left group -ml-8 md:-ml-12 lg:-ml-16">
           <img 
             src="/images/left.png" 
             alt="Node.js Muscular Fighting Mascot" 
@@ -133,7 +133,7 @@ const Hero = () => {
         </div>
         
         {/* .NET Muscular Mascot - Right Side */}
-        <div className="relative animate-fade-in-right group">
+        <div className="relative animate-fade-in-right group -mr-8 md:-mr-12 lg:-mr-16">
           <img 
             src="/images/right.png" 
             alt=".NET Muscular Fighting Mascot" 
