@@ -1,6 +1,83 @@
 import { Code, Database, Globe } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+
+  // Preload all critical images
+  useEffect(() => {
+    const imagePaths = [
+      "/images/left.png",
+      "/images/right.png",
+      "/images/net1.png",
+      "/images/net2.png",
+      "/images/net3.png",
+      "/images/net4.png",
+      "/images/net5.png",
+      "/images/node1.png",
+      "/images/node2.png",
+      "/images/node3.png",
+      "/images/node4.png",
+      "/images/node5.png",
+      "/images/worry-mouse.gif"
+    ];
+
+    let loadedCount = 0;
+    const totalImages = imagePaths.length;
+
+    const loadImage = (src: string) => {
+      return new Promise<void>((resolve) => {
+        const img = new Image();
+        img.onload = () => {
+          loadedCount++;
+          setLoadingProgress(Math.round((loadedCount / totalImages) * 100));
+          resolve();
+        };
+        img.onerror = () => {
+          loadedCount++;
+          setLoadingProgress(Math.round((loadedCount / totalImages) * 100));
+          resolve(); // Resolve anyway to not block the UI
+        };
+        img.src = src;
+      });
+    };
+
+    Promise.all(imagePaths.map(loadImage))
+      .then(() => {
+        setTimeout(() => setImagesLoaded(true), 500); // Small delay for smooth transition
+      })
+      .catch(() => {
+        setImagesLoaded(true); // Show content even if some images fail
+      });
+  }, []);
+
+  // Loading screen component
+  if (!imagesLoaded) {
+    return (
+      <section className="min-h-screen hero-animated-bg flex items-center justify-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl animate-float floating-orb"></div>
+          <div className="absolute top-0 -right-4 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-float floating-orb"></div>
+          <div className="absolute -bottom-8 left-20 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-float floating-orb"></div>
+        </div>
+
+        <div className="text-center relative z-10">
+          {/* Simple Spinner */}
+          <div className="w-16 h-16 border-4 border-white/20 border-t-purple-500 rounded-full animate-spin mx-auto mb-6"></div>
+          
+          {/* Loading Text */}
+          <p className="text-white/90 text-xl font-semibold mb-2">
+            Loading...
+          </p>
+          <p className="text-white/60 text-sm">
+            {loadingProgress}%
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="min-h-screen hero-animated-bg flex items-center justify-center relative overflow-hidden">
       {/* Background Pattern */}
