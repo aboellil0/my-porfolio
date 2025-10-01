@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
 interface FormData {
@@ -43,27 +44,35 @@ const Contact = () => {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      // Log the form data being sent
-      console.log('Submitting form data:', formData);
-      
-      // Always use /api/send-email - works both locally with Vite proxy and on Vercel
-      const apiUrl = '/api/send-email';
-      
-      console.log('API URL:', apiUrl);
-      
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      // EmailJS configuration
+      // Replace these with your actual EmailJS credentials from dashboard
+      const serviceId = 'service_m5fgky3';  // Get from EmailJS dashboard
+      const templateId = 'template_5yysedi'; // Get from EmailJS dashboard
+      const publicKey = 'gACVvVTsSw0v0IlZG';   // Get from EmailJS dashboard
 
-      console.log('Response status:', response.status);
-      const result = await response.json();
-      console.log('Response data:', result);
+      // Prepare template parameters
+      // This will send FROM: mohamed.aboellil130@gmail.com TO: mohamed.aboellil0@gmail.com
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: 'Mohamed Aboellil',
+        to_email: 'mohamed.aboellil0@gmail.com', // Your receiving email
+        reply_to: formData.email, // So you can reply directly to the sender
+      };
 
-      if (response.ok && result.success) {
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      console.log('Email sent successfully:', response);
+
+      if (response.status === 200) {
         setSubmitStatus({
           type: 'success',
           message: 'Thank you! Your message has been sent successfully.'
@@ -76,17 +85,13 @@ const Contact = () => {
           message: ''
         });
       } else {
-        setSubmitStatus({
-          type: 'error',
-          message: result.message || 'Failed to send message. Please try again.'
-        });
-        console.error('Email sending failed:', result);
+        throw new Error('Failed to send email');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus({
         type: 'error',
-        message: 'Failed to connect to server. Please check your connection and try again.'
+        message: 'Failed to send message. Please try again later.'
       });
     } finally {
       setIsSubmitting(false);
