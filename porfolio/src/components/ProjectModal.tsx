@@ -24,6 +24,8 @@ interface Project {
   role: string;
   challenges: string;
   achievements: string;
+  mascotTheme?: string;
+  githubUrl?: string;
 }
 
 interface ProjectModalProps {
@@ -160,10 +162,22 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
               <ExternalLink className="h-5 w-5" />
               <span>Live Demo</span>
             </button>
-            <button className="flex items-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg flex-1 justify-center">
-              <Github className="h-5 w-5" />
-              <span>View Code</span>
-            </button>
+            {project.githubUrl ? (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg flex-1 justify-center"
+              >
+                <Github className="h-5 w-5" />
+                <span>View Code</span>
+              </a>
+            ) : (
+              <button className="flex items-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg flex-1 justify-center">
+                <Github className="h-5 w-5" />
+                <span>View Code</span>
+              </button>
+            )}
           </div>
         </div>
       </div>

@@ -43,7 +43,12 @@ const Contact = () => {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      const response = await fetch('http://localhost:3001/send-email', {
+      // Use relative path for API - works both locally and on Vercel
+      const apiUrl = window.location.hostname === 'localhost' 
+        ? 'http://localhost:3001/send-email'
+        : '/api/send-email';
+      
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +79,7 @@ const Contact = () => {
     } catch (error) {
       setSubmitStatus({
         type: 'error',
-        message: 'Network error. Please check if the email server is running.'
+        message: 'Failed to send email. Please try again later.'
       });
     } finally {
       setIsSubmitting(false);

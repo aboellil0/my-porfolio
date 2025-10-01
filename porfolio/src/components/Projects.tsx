@@ -46,15 +46,20 @@ const Projects = () => {
         { icon: <Calendar className="h-5 w-5" />, title: "Smart Scheduling", description: "Intelligent booking system with conflict detection and automatic assignment" }
       ],
       gradient: "from-purple-500 to-violet-600",
-      image: "/images/net1.png",
-      contentBgImage: "../images/net5.png",
-      modalImages: ["/images/net1.png", "/images/net2.png", "/images/net5.png"],
+      image: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c859ad79590/Screenshot-2025-09-15-205117.png",
+      contentBgImage: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c859ad79590/Screenshot-2025-09-15-205117.png",
+      modalImages: [
+        "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c859ad79590/Screenshot-2025-09-15-205117.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c859ae7fd17/Screenshot-2025-09-15-212209.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c859aed6a8f/Screenshot-2025-09-15-205643.png"
+      ],
       projectType: "Enterprise Web Application",
       duration: "4 months",
       role: "Backend Developer",
       challenges: "Complex booking algorithms, real-time synchronization across multiple user types, and performance optimization for concurrent users.",
       achievements: "Reduced booking processing time by 60% and improved customer satisfaction with real-time status updates.",
-      mascotTheme: "net"
+      mascotTheme: "net",
+      githubUrl: "https://github.com/BasselRaafat/Services-Booking-System"
     },
     {
       title: "Event Booking System",
@@ -70,15 +75,20 @@ const Projects = () => {
         { icon: <Calendar className="h-5 w-5" />, title: "Event Management", description: "Complete event lifecycle management from creation to post-event analytics" }
       ],
       gradient: "from-purple-600 to-indigo-600",
-      image: "/images/net3.png",
-      contentBgImage: "../images/net4.png",
-      modalImages: ["/images/net3.png", "/images/net4.png", "/images/net2.png"],
+      image: "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c8602c5ac90/Screenshot-2025-09-15-212859.png",
+      contentBgImage: "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c8602c5ac90/Screenshot-2025-09-15-212859.png",
+      modalImages: [
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c8602c5ac90/Screenshot-2025-09-15-212859.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c8602b8b460/Screenshot-2025-09-15-213947.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c8602c1a20f/screenshot-1757961035117.png"
+      ],
       projectType: "Event Management Platform",
       duration: "2 months",
       role: "Full-Stack Developer",
       challenges: "Implementing Clean Architecture patterns, complex event scheduling logic, and ensuring smooth Blazor-API integration.",
       achievements: "Created a highly maintainable codebase with 95% test coverage and seamless user experience.",
-      mascotTheme: "net"
+      mascotTheme: "net",
+      githubUrl: "https://github.com/aboellil0/EventBookingSystem"
     },
     {
       title: "Real-Time Chat Application",
@@ -94,15 +104,21 @@ const Projects = () => {
         { icon: <Zap className="h-5 w-5" />, title: "Real-time Features", description: "Live typing indicators, message delivery status, and emoji reactions" }
       ],
       gradient: "from-purple-700 to-pink-600",
-      image: "/images/netnode.png",
-      contentBgImage: "../images/netnode.png",
-      modalImages: ["/images/net5.png", "/images/node3.png", "/images/node4.png"],
+      image: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c86351ae955/Screenshot-2025-09-15-215529.png",
+      contentBgImage: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c86351ae955/Screenshot-2025-09-15-215529.png",
+      modalImages: [
+        "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c86351ae955/Screenshot-2025-09-15-215529.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c863521283a/Screenshot-2025-09-15-215812.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c863524cd12/Screenshot-2025-09-15-215615.png",
+        "https://mostaql.hsoubcdn.com/uploads/portfolios/1304485/68c863527f5f6/Screenshot-2025-09-15-215546.png"
+      ],
       projectType: "Real-time Communication App",
       duration: "2.5 months",
       role: "Full-Stack Developer",
       challenges: "Managing real-time connections at scale, implementing message encryption, and optimizing performance for large group chats.",
       achievements: "Successfully handles 1000+ concurrent users with sub-100ms message delivery and 99.9% uptime.",
-      mascotTheme: "net"
+      mascotTheme: "net",
+      githubUrl: "https://github.com/aboellil0/SignalR"
     },
     {
       title: "Entertainment Hub",
@@ -151,6 +167,35 @@ const Projects = () => {
       challenges: "Complex inventory algorithms, database performance optimization, and creating intuitive desktop UI/UX.",
       achievements: "Reduced inventory processing time by 75% and eliminated stock discrepancies through automated tracking.",
       mascotTheme: "net"
+    },
+    {
+      title: "LadyAPI - Secure REST API with JWT",
+      description: "A practical REST API demonstrating professional JWT authentication with refresh tokens for secure user management and token-based authorization.",
+      detailedDescription: "A secure REST API built with .NET Core focusing on implementing industry-standard JWT authentication patterns. The project demonstrates best practices for API security including access tokens, refresh tokens, and secure user authentication flows. Features comprehensive CRUD operations to test token validation and authorization mechanisms.",
+      technologies: [".NET Core", "JWT", "ASP.NET Identity", "Entity Framework"],
+      icon: <Shield className="h-6 w-6" />,
+      features: ["JWT Authentication", "Refresh Tokens", "Secure API Endpoints", "CRUD Operations"],
+      detailedFeatures: [
+        { icon: <Shield className="h-5 w-5" />, title: "JWT Authentication", description: "Industry-standard token-based authentication with secure token generation and validation" },
+        { icon: <Zap className="h-5 w-5" />, title: "Refresh Token Flow", description: "Automatic token refresh mechanism ensuring seamless user experience and enhanced security" },
+        { icon: <Package className="h-5 w-5" />, title: "Secure Endpoints", description: "Protected API routes with role-based authorization and middleware validation" },
+        { icon: <Database className="h-5 w-5" />, title: "CRUD Operations", description: "Complete set of Create, Read, Update, Delete operations for testing authentication flows" }
+      ],
+      gradient: "from-blue-600 to-cyan-600",
+      image: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c80bff5669a/Screenshot-2025-09-15-154844.png",
+      contentBgImage: "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c80bff5669a/Screenshot-2025-09-15-154844.png",
+      modalImages: [
+        "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c80bff5669a/Screenshot-2025-09-15-154844.png",
+        "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c80bff5669a/Screenshot-2025-09-15-154844.png",
+        "https://mostaql.hsoubcdn.com/uploads/thumbnails/1304485/68c80bff5669a/Screenshot-2025-09-15-154844.png"
+      ],
+      projectType: "REST API Security Project",
+      duration: "1 month",
+      role: "Backend Developer",
+      challenges: "Implementing secure token storage, handling token expiration gracefully, and ensuring proper validation of refresh tokens.",
+      achievements: "Created a production-ready authentication system following security best practices and OWASP guidelines.",
+      mascotTheme: "net",
+      githubUrl: "https://github.com/aboellil0/API-App"
     }
   ];
 
@@ -255,10 +300,22 @@ const Projects = () => {
                       <ExternalLink className="h-4 w-4" />
                       <span className="text-sm">View Details</span>
                     </button>
-                    <button className="flex items-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg">
-                      <Github className="h-4 w-4" />
-                      <span className="text-sm">Code</span>
-                    </button>
+                    {project.githubUrl ? (
+                      <a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg"
+                      >
+                        <Github className="h-4 w-4" />
+                        <span className="text-sm">Code</span>
+                      </a>
+                    ) : (
+                      <button className="flex items-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg">
+                        <Github className="h-4 w-4" />
+                        <span className="text-sm">Code</span>
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
