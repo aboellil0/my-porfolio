@@ -12,7 +12,7 @@ const Skills = () => {
       skills: ["C#", ".NET Core (MVC, Web API)", "Node.js", "Express.js", "LINQ", "Entity Framework Core"],
       color: "from-purple-500 to-purple-600",
       hoverEffect: "hover:animate-jello",
-      mascotImage: "../images/net2.png",
+      mascotImage: "/images/net2.png",
       mascotTheme: "net"
     },
     {
@@ -21,7 +21,7 @@ const Skills = () => {
       skills: ["JavaScript", "Blazor", "HTML", "CSS", "jQuery", "Bootstrap", "TailwindCSS"],
       color: "from-green-500 to-green-600",
       hoverEffect: "hover:animate-rubber-band",
-      mascotImage: "../images/node3.png",
+      mascotImage: "/images/node3.png",
       mascotTheme: "node"
     },
     {
@@ -30,7 +30,7 @@ const Skills = () => {
       skills: ["Microsoft SQL Server", "MongoDB", "MySQL", "Redis (Basics)"],
       color: "from-purple-600 to-indigo-500",
       hoverEffect: "hover:animate-swing",
-      mascotImage: "../images/net4.png",
+      mascotImage: "/images/net4.png",
       mascotTheme: "net"
     },
     {
@@ -39,7 +39,7 @@ const Skills = () => {
       skills: ["RESTful APIs", "SignalR", "Socket.io", "gRPC (Learning)"],
       color: "from-green-600 to-emerald-500",
       hoverEffect: "hover:animate-tada",
-      mascotImage: "../images/node5.png",
+      mascotImage: "/images/node5.png",
       mascotTheme: "node"
     },
     {
@@ -48,7 +48,7 @@ const Skills = () => {
       skills: ["JWT", "OAuth 2.0", "Refresh Tokens", "ASP.NET Core Identity"],
       color: "from-purple-700 to-violet-600",
       hoverEffect: "hover:animate-heartbeat",
-      mascotImage: "../images/net5.png",
+      mascotImage: "/images/net5.png",
       mascotTheme: "net"
     },
     {
@@ -57,7 +57,7 @@ const Skills = () => {
       skills: ["Git", "GitHub", "Docker", "Postman", "Swagger (OpenAPI)", "Firebase"],
       color: "from-green-700 to-teal-600",
       hoverEffect: "hover:animate-wobble",
-      mascotImage: "../images/node4.png",
+      mascotImage: "/images/node4.png",
       mascotTheme: "node"
     }
   ];
@@ -87,10 +87,10 @@ const Skills = () => {
         
         {/* Subtle mascot silhouettes in background */}
         <div className="absolute top-1/4 left-1/4 w-48 h-48 opacity-30">
-          <img src="../images/node1.png" alt="" className="w-full h-full object-contain filter grayscale animate-float" style={{animationDelay: '2s'}} />
+          <img src="/images/node1.png" alt="" className="w-full h-full object-contain filter grayscale animate-float" style={{animationDelay: '2s'}} />
         </div>
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 opacity-30">
-          <img src="../images/net1.png" alt="" className="w-full h-full object-contain filter grayscale animate-float" style={{animationDelay: '4s'}} />
+          <img src="/images/net1.png" alt="" className="w-full h-full object-contain filter grayscale animate-float" style={{animationDelay: '4s'}} />
         </div>
       </div>
 
@@ -153,10 +153,10 @@ const Skills = () => {
           
           {/* Battle arena style decoration */}
           <div className="absolute top-4 left-4 w-12 h-12 opacity-20">
-            <img src="../images/node2.png" alt="" className="w-full h-full object-contain animate-float" />
+            <img src="/images/node2.png" alt="" className="w-full h-full object-contain animate-float" />
           </div>
           <div className="absolute top-4 right-4 w-12 h-12 opacity-20">
-            <img src="../images/net3.png" alt="" className="w-full h-full object-contain animate-float" style={{animationDelay: '1s'}} />
+            <img src="/images/net3.png" alt="" className="w-full h-full object-contain animate-float" style={{animationDelay: '1s'}} />
           </div>
           
           <h3 className="text-3xl font-bold bg-gradient-to-r from-dark-800 dark:from-white to-primary-600 bg-clip-text text-transparent mb-4 text-center relative z-10">Core Concepts & Methodologies</h3>

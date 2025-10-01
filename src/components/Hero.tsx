@@ -34,7 +34,7 @@ const Hero = () => {
         {/* Node.js Muscular Mascot - Left Side */}
         <div className="relative animate-fade-in-left group">
           <img 
-            src="../images/left.png" 
+            src="/images/left.png" 
             alt="Node.js Muscular Fighting Mascot" 
             className="w-72 h-72 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] opacity-90 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110 object-contain 
             drop-shadow-[0_0_50px_rgba(0,0,0,0.9)] 
@@ -58,7 +58,7 @@ const Hero = () => {
         {/* .NET Muscular Mascot - Right Side */}
         <div className="relative animate-fade-in-right group">
           <img 
-            src="../images/right.png" 
+            src="/images/right.png" 
             alt=".NET Muscular Fighting Mascot" 
             className="w-72 h-72 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] opacity-90 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110 object-contain 
             drop-shadow-[0_0_50px_rgba(0,0,0,0.9)] 
@@ -84,7 +84,7 @@ const Hero = () => {
         <div className="space-y-8">
           <div className="inline-block p-4 bg-white/10 backdrop-blur-sm rounded-2xl mb-6 shadow-2xl border border-white/20 animate-scale-in" style={{animationDelay: '0.5s'}}>
             <img 
-              src="../images/worry-mouse.gif" 
+              src="/images/worry-mouse.gif" 
               alt="Worried Mouse" 
               className="h-16 w-16 mx-auto object-contain"
             />
