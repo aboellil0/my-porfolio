@@ -43,10 +43,13 @@ const Contact = () => {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      // Use relative path for API - works both locally and on Vercel
-      const apiUrl = window.location.hostname === 'localhost' 
-        ? 'http://localhost:3001/send-email'
-        : '/api/send-email';
+      // Log the form data being sent
+      console.log('Submitting form data:', formData);
+      
+      // Always use /api/send-email - works both locally with Vite proxy and on Vercel
+      const apiUrl = '/api/send-email';
+      
+      console.log('API URL:', apiUrl);
       
       const response = await fetch(apiUrl, {
         method: 'POST',
@@ -56,9 +59,11 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log('Response status:', response.status);
       const result = await response.json();
+      console.log('Response data:', result);
 
-      if (result.success) {
+      if (response.ok && result.success) {
         setSubmitStatus({
           type: 'success',
           message: 'Thank you! Your message has been sent successfully.'
@@ -75,11 +80,13 @@ const Contact = () => {
           type: 'error',
           message: result.message || 'Failed to send message. Please try again.'
         });
+        console.error('Email sending failed:', result);
       }
     } catch (error) {
+      console.error('Error submitting form:', error);
       setSubmitStatus({
         type: 'error',
-        message: 'Failed to send email. Please try again later.'
+        message: 'Failed to connect to server. Please check your connection and try again.'
       });
     } finally {
       setIsSubmitting(false);
