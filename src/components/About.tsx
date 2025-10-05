@@ -108,7 +108,7 @@ const About = () => {
                 </div>
                 <div>
                   <span className="text-dark-700 dark:text-dark-200 font-medium">✉️ Battle Command: </span>
-                  <span className="text-blue-600 dark:text-blue-400 font-bold">mohamed.aboellil@email.com</span>
+                  <span className="text-blue-600 dark:text-blue-400 font-bold">mohamed.aboellil0@gmail.com</span>
                 </div>
               </div>
               
