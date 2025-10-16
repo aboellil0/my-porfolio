@@ -80,11 +80,15 @@ const Experience = () => {
   const volunteer3Animation = useScrollAnimation<HTMLDivElement>({
     delay: 550,
   });
+  const volunteer4Animation = useScrollAnimation<HTMLDivElement>({
+    delay: 650,
+  });
 
   const volunteerAnimations = [
     volunteer1Animation,
     volunteer2Animation,
     volunteer3Animation,
+    volunteer4Animation,
   ];
 
   return (

@@ -57,7 +57,7 @@ const Certifications = () => {
     },
   ];
 
-  // Create animation hooks for each certification card (9 certifications)
+  // Create animation hooks for each certification card (7 certifications)
   const cert1Animation = useScrollAnimation<HTMLDivElement>({ delay: 200 });
   const cert2Animation = useScrollAnimation<HTMLDivElement>({ delay: 300 });
   const cert3Animation = useScrollAnimation<HTMLDivElement>({ delay: 400 });
@@ -65,8 +65,6 @@ const Certifications = () => {
   const cert5Animation = useScrollAnimation<HTMLDivElement>({ delay: 600 });
   const cert6Animation = useScrollAnimation<HTMLDivElement>({ delay: 700 });
   const cert7Animation = useScrollAnimation<HTMLDivElement>({ delay: 800 });
-  const cert8Animation = useScrollAnimation<HTMLDivElement>({ delay: 900 });
-  const cert9Animation = useScrollAnimation<HTMLDivElement>({ delay: 1000 });
 
   const certificationAnimations = [
     cert1Animation,
@@ -76,8 +74,6 @@ const Certifications = () => {
     cert5Animation,
     cert6Animation,
     cert7Animation,
-    cert8Animation,
-    cert9Animation,
   ];
 
   const getCategoryColor = (category: string) => {
