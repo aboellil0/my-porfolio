@@ -1,5 +1,8 @@
 import { Code, Database, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
+import { LoadingSpinner, Button } from "./ui";
+import { HeroBackground, Mascot } from "./common";
+import { Container, Section } from "./layout";
 
 const Hero = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -43,97 +46,51 @@ const Hero = () => {
 
   if (!imagesLoaded) {
     return (
-      <section className="min-h-screen hero-animated-bg flex items-center justify-center relative overflow-hidden">
-        {/* Background Orbs */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-          <div className="absolute top-0 -right-4 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-          <div className="absolute -bottom-8 left-20 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-        </div>
-
-        {/* Loading Spinner */}
-        <div className="text-center relative z-10">
-          <div className="w-16 h-16 border-4 border-white/20 border-t-purple-500 rounded-full animate-spin mx-auto mb-6"></div>
-          <p className="text-white/90 text-xl font-semibold mb-2">Loading...</p>
-          <p className="text-white/60 text-sm">{loadingProgress}%</p>
-        </div>
-      </section>
+      <Section 
+        className="min-h-screen hero-animated-bg flex items-center justify-center relative overflow-hidden"
+        background="transparent"
+        padding="none"
+      >
+        <HeroBackground />
+        <LoadingSpinner 
+          size="lg" 
+          color="white" 
+          text="Loading..." 
+          progress={loadingProgress}
+        />
+      </Section>
     );
   }
 
   return (
-    <section className="min-h-screen hero-animated-bg flex items-center justify-center relative overflow-hidden">
-      {/* Background Lights */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-        <div className="absolute top-0 -right-4 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-      </div>
-
-      {/* Grid Pattern */}
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(147,51,234,0.3) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59,130,246,0.3) 1px, transparent 1px),
-            radial-gradient(circle at 25% 50%, rgba(147,51,234,0.1) 0%, transparent 50%),
-            radial-gradient(circle at 75% 50%, rgba(59,130,246,0.1) 0%, transparent 50%)
-          `,
-          backgroundSize: "60px 60px, 60px 60px, 800px 800px, 800px 800px",
-        }}
-      ></div>
-
-      {/* Energy Lines */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-full h-0.5 bg-gradient-to-r from-purple-500/50 via-red-500/70 to-blue-500/50 animate-pulse"></div>
-        <div
-          className="absolute w-full h-0.5 bg-gradient-to-r from-purple-400/30 via-yellow-400/50 to-blue-400/30 animate-pulse"
-          style={{ animationDelay: "0.5s" }}
-        ></div>
-      </div>
+    <Section 
+      className="min-h-screen hero-animated-bg flex items-center justify-center relative overflow-hidden"
+      background="transparent"
+      padding="none"
+    >
+      <HeroBackground />
 
       {/* Mascots */}
       <div className="absolute inset-0 flex items-center justify-between pointer-events-none">
-        {/* Node.js Mascot */}
-        <div className="relative animate-fade-in-left group -ml-8 md:-ml-12 lg:-ml-16">
-          <img
-            src="/images/left.png"
-            alt="Node.js Muscular Mascot"
-            className="w-72 h-72 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem]
-              opacity-90 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110 object-contain
-              drop-shadow-[0_0_50px_rgba(0,0,0,0.9)_0_0_100px_rgba(34,197,94,0.9)_0_30px_60px_rgba(0,0,0,0.8)]
-              group-hover:drop-shadow-[0_0_70px_rgba(34,197,94,1)_0_0_140px_rgba(34,197,94,1)_0_35px_70px_rgba(0,0,0,1)]
-              brightness-110 contrast-120 saturate-120 animate-float"
-            style={{ animationDelay: "1s" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-green-400/50 via-emerald-500/40 to-green-600/50 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
-          <div className="absolute inset-0 bg-green-500/30 rounded-full blur-[100px] -z-20 animate-glow"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-green-300/60 via-emerald-400/40 to-transparent rounded-full blur-2xl -z-30 scale-150"></div>
-          <div className="absolute -inset-12 bg-gradient-to-r from-green-500/25 to-transparent rounded-full blur-xl animate-spin-slow -z-40"></div>
-        </div>
-
-        {/* .NET Mascot */}
-        <div className="relative animate-fade-in-right group -mr-8 md:-mr-12 lg:-mr-16">
-          <img
-            src="/images/right.png"
-            alt=".NET Muscular Mascot"
-            className="w-72 h-72 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem]
-              opacity-90 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110 object-contain
-              drop-shadow-[0_0_50px_rgba(0,0,0,0.9)_0_0_100px_rgba(147,51,234,0.9)_0_30px_60px_rgba(0,0,0,0.8)]
-              group-hover:drop-shadow-[0_0_70px_rgba(147,51,234,1)_0_0_140px_rgba(147,51,234,1)_0_35px_70px_rgba(0,0,0,1)]
-              brightness-110 contrast-120 saturate-120 animate-float"
-            style={{ animationDelay: "1.5s" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-bl from-purple-400/50 via-violet-500/40 to-purple-600/50 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
-          <div className="absolute inset-0 bg-purple-500/30 rounded-full blur-[100px] -z-20 animate-glow"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-purple-300/60 via-violet-400/40 to-transparent rounded-full blur-2xl -z-30 scale-150"></div>
-          <div className="absolute -inset-12 bg-gradient-to-l from-purple-500/25 to-transparent rounded-full blur-xl animate-spin-slow -z-40"></div>
-        </div>
+        <Mascot
+          src="/images/left.png"
+          alt="Node.js Muscular Mascot"
+          side="left"
+          theme="node"
+          delay="1s"
+        />
+        
+        <Mascot
+          src="/images/right.png"
+          alt=".NET Muscular Mascot"
+          side="right"
+          theme="net"
+          delay="1.5s"
+        />
       </div>
 
       {/* Hero Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+      <Container className="text-center relative z-10 space-y-8" maxWidth="xl">
         <div
           className="inline-block p-4 bg-white/10 backdrop-blur-sm rounded-2xl mb-6 shadow-2xl border border-white/20 animate-scale-in"
           style={{ animationDelay: "0.5s" }}
@@ -179,34 +136,36 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up"
           style={{ animationDelay: "2s" }}
         >
-          <a
+          <Button
             href="#contact"
+            variant="primary"
+            size="lg"
             onClick={(e) => {
-              e.preventDefault();
+              e?.preventDefault();
               document
                 .querySelector("#contact")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg hover:shadow-glow-accent"
           >
             Get In Touch
-          </a>
+          </Button>
 
-          <a
+          <Button
             href="#projects"
+            variant="outline"
+            size="lg"
             onClick={(e) => {
-              e.preventDefault();
+              e?.preventDefault();
               document
                 .querySelector("#projects")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 hover:border-white/50 transition-all duration-300 transform hover:scale-105 hover:shadow-glow"
           >
             View My Work
-          </a>
+          </Button>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 };
 
