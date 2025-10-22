@@ -97,7 +97,7 @@ const Hero = () => {
           </div>
 
           <div
-            className="flex flex-col xs:flex-row gap-4 sm:gap-6 justify-center animate-fade-in-up px-4 sm:px-0"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-fade-in-up px-4 sm:px-0"
             style={{ animationDelay: "2s" }}
           >
             <Button
@@ -110,7 +110,7 @@ const Hero = () => {
                   .querySelector("#contact")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="w-full xs:w-auto touch-manipulation"
+              className="w-full sm:w-auto touch-manipulation"
             >
               Get In Touch
             </Button>
@@ -125,7 +125,7 @@ const Hero = () => {
                   .querySelector("#projects")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="w-full xs:w-auto touch-manipulation"
+              className="w-full sm:w-auto touch-manipulation"
             >
               View My Work
             </Button>

@@ -205,9 +205,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 pt-4 xs:pt-6 border-t border-gray-200 dark:border-dark-600">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 xs:pt-6 border-t border-gray-200 dark:border-dark-600">
             <button
-              className={`flex items-center justify-center space-x-2 bg-gradient-to-r ${project.gradient} hover:shadow-xl text-white px-6 xs:px-8 py-3 rounded-lg xs:rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg flex-1 min-h-[44px] touch-manipulation`}
+              className={`flex items-center justify-center space-x-2 bg-gradient-to-r ${project.gradient} hover:shadow-xl text-white px-6 sm:px-8 py-3 rounded-lg xs:rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg flex-1 min-h-[44px] touch-manipulation`}
             >
               <ExternalLink className="h-4 w-4 xs:h-5 xs:w-5" />
               <span className="text-sm xs:text-base">Live Demo</span>
@@ -217,13 +217,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-6 xs:px-8 py-3 rounded-lg xs:rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg flex-1 min-h-[44px] touch-manipulation"
+                className="flex items-center justify-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-6 sm:px-8 py-3 rounded-lg xs:rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg flex-1 min-h-[44px] touch-manipulation"
               >
                 <Github className="h-4 w-4 xs:h-5 xs:w-5" />
                 <span className="text-sm xs:text-base">View Code</span>
               </a>
             ) : (
-              <button className="flex items-center justify-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-6 xs:px-8 py-3 rounded-lg xs:rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg flex-1 min-h-[44px] touch-manipulation">
+              <button className="flex items-center justify-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-6 sm:px-8 py-3 rounded-lg xs:rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg flex-1 min-h-[44px] touch-manipulation">
                 <Github className="h-4 w-4 xs:h-5 xs:w-5" />
                 <span className="text-sm xs:text-base">View Code</span>
               </button>

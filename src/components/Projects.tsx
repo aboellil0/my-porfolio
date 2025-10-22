@@ -720,10 +720,10 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <div className="flex flex-col xs:flex-row gap-3 xs:gap-4">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <button
                       onClick={() => openModal(index)}
-                      className={`flex items-center justify-center space-x-2 bg-gradient-to-r ${project.gradient} hover:shadow-xl text-white px-4 xs:px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg touch-manipulation min-h-[44px]`}
+                      className={`flex items-center justify-center space-x-2 bg-gradient-to-r ${project.gradient} hover:shadow-xl text-white px-4 sm:px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg touch-manipulation min-h-[44px] w-full sm:w-auto`}
                     >
                       <ExternalLink className="h-4 w-4" />
                       <span className="text-sm">View Details</span>
@@ -733,7 +733,7 @@ const Projects = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-4 xs:px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg touch-manipulation min-h-[44px]"
+                        className="flex items-center justify-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-4 sm:px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg touch-manipulation min-h-[44px] w-full sm:w-auto"
                       >
                         <Github className="h-4 w-4" />
                         <span className="text-sm">Code</span>
