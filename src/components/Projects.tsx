@@ -639,15 +639,15 @@ const Projects = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-500 mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
               ref={projectCardAnimations[index].ref}
-              className={`bg-white/80 dark:bg-dark-800/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl dark:shadow-2xl dark:shadow-primary-500/10 hover:shadow-2xl dark:hover:shadow-primary-500/20 transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-dark-700 group ${projectCardAnimations[index].animationClasses}`}
+              className={`bg-white/80 dark:bg-dark-800/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl dark:shadow-2xl dark:shadow-primary-500/10 hover:shadow-2xl dark:hover:shadow-primary-500/20 transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-dark-700 group touch-manipulation ${projectCardAnimations[index].animationClasses}`}
             >
               {/* Content */}
-              <div className="relative z-10 p-8">
+              <div className="relative z-10 p-4 xs:p-6 sm:p-8">
                 {/* Content background image with overlay */}
                 <div
                   className="absolute inset-0 rounded-2xl opacity-15 group-hover:opacity-25 transition-opacity duration-500"
@@ -673,55 +673,57 @@ const Projects = () => {
                     </div>
                   )}
 
-                  <div className="flex items-center mb-6">
+                  <div className="flex items-start mb-4 sm:mb-6">
                     <div
-                      className={`p-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      className={`p-2.5 xs:p-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl mr-3 xs:mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shrink-0`}
                     >
                       {project.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-dark-800 dark:text-dark-100 group-hover:text-primary-600 dark:group-hover:text-primary-300 transition-colors duration-300 drop-shadow-md">
+                    <h3 className="text-lg xs:text-xl font-bold text-dark-800 dark:text-dark-100 group-hover:text-primary-600 dark:group-hover:text-primary-300 transition-colors duration-300 drop-shadow-md leading-tight">
                       {project.title}
                     </h3>
                   </div>
 
-                  <p className="text-dark-700 dark:text-dark-200 mb-6 leading-relaxed text-base drop-shadow-md font-semibold">
+                  <p className="text-dark-700 dark:text-dark-200 mb-4 sm:mb-6 leading-relaxed text-sm xs:text-base drop-shadow-md font-semibold">
                     {project.description}
                   </p>
 
-                  <div className="mb-6">
-                    <h4 className="text-sm font-bold text-dark-800 dark:text-dark-200 mb-3 drop-shadow-md">
+                  <div className="mb-4 sm:mb-6">
+                    <h4 className="text-xs xs:text-sm font-bold text-dark-800 dark:text-dark-200 mb-2 sm:mb-3 drop-shadow-md">
                       Key Features:
                     </h4>
-                    <ul className="text-sm text-dark-700 dark:text-dark-300 space-y-2">
+                    <ul className="text-xs xs:text-sm text-dark-700 dark:text-dark-300 space-y-1.5 xs:space-y-2">
                       {project.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
-                          className="flex items-center drop-shadow-md"
+                          className="flex items-start drop-shadow-md"
                         >
                           <div
-                            className={`w-2 h-2 bg-gradient-to-r ${project.gradient} rounded-full mr-3 shadow-sm`}
+                            className={`w-1.5 h-1.5 xs:w-2 xs:h-2 bg-gradient-to-r ${project.gradient} rounded-full mr-2 xs:mr-3 shadow-sm shrink-0 mt-1.5 xs:mt-2`}
                           ></div>
-                          <span className="font-semibold">{feature}</span>
+                          <span className="font-semibold leading-tight">
+                            {feature}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="flex flex-wrap gap-3 mb-8">
+                  <div className="flex flex-wrap gap-1.5 xs:gap-2 sm:gap-3 mb-6 sm:mb-8">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="bg-white/90 dark:bg-dark-700/90 backdrop-blur-sm text-dark-800 dark:text-dark-100 px-4 py-2 rounded-full text-xs font-bold border border-primary-200/50 dark:border-dark-500/50 hover:border-primary-400 dark:hover:border-primary-400 transition-all duration-300 shadow-md"
+                        className="bg-white/90 dark:bg-dark-700/90 backdrop-blur-sm text-dark-800 dark:text-dark-100 px-2.5 xs:px-3 sm:px-4 py-1.5 xs:py-2 rounded-full text-xs font-bold border border-primary-200/50 dark:border-dark-500/50 hover:border-primary-400 dark:hover:border-primary-400 transition-all duration-300 shadow-md whitespace-nowrap"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex space-x-4">
+                  <div className="flex flex-col xs:flex-row gap-3 xs:gap-4">
                     <button
                       onClick={() => openModal(index)}
-                      className={`flex items-center space-x-2 bg-gradient-to-r ${project.gradient} hover:shadow-xl text-white px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg`}
+                      className={`flex items-center justify-center space-x-2 bg-gradient-to-r ${project.gradient} hover:shadow-xl text-white px-4 xs:px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg touch-manipulation min-h-[44px]`}
                     >
                       <ExternalLink className="h-4 w-4" />
                       <span className="text-sm">View Details</span>
@@ -731,13 +733,13 @@ const Projects = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg"
+                        className="flex items-center justify-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-4 xs:px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg touch-manipulation min-h-[44px]"
                       >
                         <Github className="h-4 w-4" />
                         <span className="text-sm">Code</span>
                       </a>
                     ) : (
-                      <button className="flex items-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg">
+                      <button className="flex items-center justify-center space-x-2 bg-gradient-to-r from-dark-700 to-dark-800 hover:from-dark-800 hover:to-dark-900 hover:shadow-xl text-white px-4 xs:px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg touch-manipulation min-h-[44px]">
                         <Github className="h-4 w-4" />
                         <span className="text-sm">Code</span>
                       </button>

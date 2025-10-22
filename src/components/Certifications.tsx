@@ -131,7 +131,7 @@ const Certifications = () => {
             <div
               key={index}
               ref={certificationAnimations[index].ref}
-              className={`bg-white dark:bg-dark-900 rounded-xl p-6 shadow-lg dark:shadow-2xl dark:shadow-primary-500/10 hover:shadow-xl dark:hover:shadow-primary-500/20 transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-dark-700 ${certificationAnimations[index].animationClasses}`}
+              className={`bg-white dark:bg-dark-900 rounded-xl p-4 xs:p-6 shadow-lg dark:shadow-2xl dark:shadow-primary-500/10 hover:shadow-xl dark:hover:shadow-primary-500/20 transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-dark-700 touch-manipulation ${certificationAnimations[index].animationClasses}`}
             >
               <div className="flex items-start justify-between mb-4">
                 <div

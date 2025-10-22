@@ -167,16 +167,16 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
           {skillCategories.map((category, index) => (
             <div
               key={index}
               ref={skillCardAnimations[index].ref}
-              className={`bg-white/80 dark:bg-dark-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl dark:shadow-2xl dark:shadow-primary-500/10 hover:shadow-2xl dark:hover:shadow-primary-500/20 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-dark-700 group cursor-pointer relative overflow-hidden ${category.hoverEffect} ${skillCardAnimations[index].animationClasses}`}
+              className={`bg-white/80 dark:bg-dark-800/80 backdrop-blur-sm p-4 xs:p-6 sm:p-8 rounded-2xl shadow-xl dark:shadow-2xl dark:shadow-primary-500/10 hover:shadow-2xl dark:hover:shadow-primary-500/20 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-dark-700 group cursor-pointer relative overflow-hidden touch-manipulation ${category.hoverEffect} ${skillCardAnimations[index].animationClasses}`}
             >
-              {/* Mascot background image */}
+              {/* Mascot background image - responsive sizing */}
               <div
-                className="absolute top-4 right-4 w-16 h-16 opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                className="absolute top-2 xs:top-4 right-2 xs:right-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 opacity-20 group-hover:opacity-30 transition-opacity duration-300"
                 style={{
                   backgroundImage: `url(${category.mascotImage})`,
                   backgroundSize: "contain",
@@ -185,14 +185,14 @@ const Skills = () => {
                 }}
               />
 
-              <div className="flex items-center mb-6 relative z-10">
+              <div className="flex items-center mb-4 sm:mb-6 relative z-10">
                 <div
-                  className={`p-3 bg-gradient-to-r ${category.color} text-white rounded-xl mr-4 group-hover:scale-110 transition-all duration-300 animate-glow`}
+                  className={`p-2 xs:p-2.5 sm:p-3 bg-gradient-to-r ${category.color} text-white rounded-xl mr-3 sm:mr-4 group-hover:scale-110 transition-all duration-300 animate-glow shrink-0`}
                 >
                   {category.icon}
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-dark-800 dark:text-dark-200 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-lg xs:text-xl font-bold text-dark-800 dark:text-dark-200 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300 leading-tight">
                     {category.title}
                   </h3>
                   <div className="text-xs font-medium text-gray-500 dark:text-dark-400 mt-1">
@@ -202,11 +202,11 @@ const Skills = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-2 relative z-10">
+              <div className="flex flex-wrap gap-1.5 xs:gap-2 relative z-10">
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className={`bg-gradient-to-r from-primary-50 to-accent-50 dark:from-dark-700 dark:to-dark-600 text-dark-700 dark:text-dark-200 px-4 py-2 rounded-full text-sm font-semibold border border-primary-100 dark:border-dark-600 hover:border-primary-300 dark:hover:border-primary-500 hover:shadow-md transition-all duration-300 transform hover:scale-105 hover:animate-pulse cursor-pointer ${
+                    className={`bg-gradient-to-r from-primary-50 to-accent-50 dark:from-dark-700 dark:to-dark-600 text-dark-700 dark:text-dark-200 px-2.5 xs:px-3 sm:px-4 py-1.5 xs:py-2 rounded-full text-xs xs:text-sm font-semibold border border-primary-100 dark:border-dark-600 hover:border-primary-300 dark:hover:border-primary-500 hover:shadow-md transition-all duration-300 transform hover:scale-105 hover:animate-pulse cursor-pointer touch-manipulation ${
                       category.mascotTheme === "net"
                         ? "hover:bg-purple-50 dark:hover:bg-purple-900/20"
                         : "hover:bg-green-50 dark:hover:bg-green-900/20"
@@ -245,17 +245,17 @@ const Skills = () => {
             />
           </div>
 
-          <h3 className="text-3xl font-bold bg-gradient-to-r from-dark-800 dark:from-white to-primary-600 bg-clip-text text-transparent mb-4 text-center relative z-10">
+          <h3 className="text-2xl xs:text-3xl font-bold bg-gradient-to-r from-dark-800 dark:from-white to-primary-600 bg-clip-text text-transparent mb-3 sm:mb-4 text-center relative z-10 leading-tight">
             Core Concepts & Methodologies
           </h3>
-          <p className="text-center text-gray-600 dark:text-dark-300 mb-8 relative z-10">
+          <p className="text-center text-gray-600 dark:text-dark-300 mb-6 sm:mb-8 relative z-10 text-sm xs:text-base px-4 sm:px-0">
             ⚔️ Battle-tested programming principles and methodologies ⚔️
           </p>
-          <div className="flex flex-wrap justify-center gap-4 relative z-10">
+          <div className="flex flex-wrap justify-center gap-2 xs:gap-3 sm:gap-4 relative z-10 px-4 sm:px-0">
             {concepts.map((concept, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-r from-primary-600 to-accent-600 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:animate-shimmer bg-shimmer cursor-pointer animate-fade-in-up"
+                className="bg-gradient-to-r from-primary-600 to-accent-600 text-white px-3 xs:px-4 sm:px-6 py-2 xs:py-2.5 sm:py-3 rounded-full text-xs xs:text-sm font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:animate-shimmer bg-shimmer cursor-pointer animate-fade-in-up touch-manipulation"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 {concept}

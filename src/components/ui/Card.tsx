@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface CardProps {
   children: React.ReactNode;
@@ -10,17 +10,22 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({
   children,
-  className = '',
+  className = "",
   gradient,
   hover = true,
-  animation = ''
+  animation = "",
 }) => {
-  const baseClasses = 'bg-white dark:bg-dark-900 rounded-xl shadow-lg dark:shadow-2xl dark:shadow-primary-500/10 border border-gray-100 dark:border-dark-700 transition-all duration-300';
-  const hoverClasses = hover ? 'hover:shadow-xl dark:hover:shadow-primary-500/20 transform hover:-translate-y-2' : '';
-  const gradientClasses = gradient ? `bg-gradient-to-r ${gradient}` : '';
-  
+  const baseClasses =
+    "bg-white dark:bg-dark-900 rounded-lg xs:rounded-xl shadow-lg dark:shadow-2xl dark:shadow-primary-500/10 border border-gray-100 dark:border-dark-700 transition-all duration-300 touch-manipulation";
+  const hoverClasses = hover
+    ? "hover:shadow-xl dark:hover:shadow-primary-500/20 transform hover:-translate-y-2"
+    : "";
+  const gradientClasses = gradient ? `bg-gradient-to-r ${gradient}` : "";
+
   return (
-    <div className={`${baseClasses} ${hoverClasses} ${gradientClasses} ${animation} ${className}`}>
+    <div
+      className={`${baseClasses} ${hoverClasses} ${gradientClasses} ${animation} ${className}`}
+    >
       {children}
     </div>
   );

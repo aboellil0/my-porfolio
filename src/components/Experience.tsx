@@ -140,16 +140,16 @@ const Experience = () => {
             Professional Experience
           </h3>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {professionalExperience.map((exp, index) => (
               <div
                 key={index}
                 ref={professionalAnimations[index].ref}
-                className={`bg-white dark:bg-dark-900 rounded-xl p-6 shadow-lg dark:shadow-2xl dark:shadow-primary-500/10 hover:shadow-xl dark:hover:shadow-primary-500/20 transition-all duration-300 border border-gray-100 dark:border-dark-700 ${professionalAnimations[index].animationClasses}`}
+                className={`bg-white dark:bg-dark-900 rounded-xl p-4 xs:p-6 shadow-lg dark:shadow-2xl dark:shadow-primary-500/10 hover:shadow-xl dark:hover:shadow-primary-500/20 transition-all duration-300 border border-gray-100 dark:border-dark-700 ${professionalAnimations[index].animationClasses}`}
               >
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-3 xs:space-x-4">
                   <div
-                    className={`p-3 rounded-full ${
+                    className={`p-2.5 xs:p-3 rounded-full shrink-0 ${
                       exp.type === "leadership"
                         ? "bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400"
                         : "bg-accent-100 dark:bg-accent-900/50 text-accent-600 dark:text-accent-400"
@@ -157,19 +157,19 @@ const Experience = () => {
                   >
                     {exp.icon}
                   </div>
-                  <div className="flex-1">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
+                      <h4 className="text-lg xs:text-xl font-semibold text-gray-900 dark:text-white leading-tight">
                         {exp.title}
                       </h4>
-                      <span className="text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 px-3 py-1 rounded-full">
+                      <span className="text-xs xs:text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 px-3 py-1 rounded-full whitespace-nowrap self-start">
                         {exp.period}
                       </span>
                     </div>
-                    <p className="text-lg text-gray-600 dark:text-dark-300 mb-3">
+                    <p className="text-base xs:text-lg text-gray-600 dark:text-dark-300 mb-3 leading-tight">
                       {exp.company}
                     </p>
-                    <p className="text-gray-600 dark:text-dark-400 leading-relaxed">
+                    <p className="text-sm xs:text-base text-gray-600 dark:text-dark-400 leading-relaxed">
                       {exp.description}
                     </p>
                   </div>
@@ -189,25 +189,27 @@ const Experience = () => {
             Volunteering Experience
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {volunteeringExperience.map((exp, index) => (
               <div
                 key={index}
                 ref={volunteerAnimations[index].ref}
-                className={`bg-white dark:bg-dark-900 rounded-xl p-6 shadow-lg dark:shadow-2xl dark:shadow-primary-500/10 hover:shadow-xl dark:hover:shadow-primary-500/20 transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-700 ${volunteerAnimations[index].animationClasses}`}
+                className={`bg-white dark:bg-dark-900 rounded-xl p-4 xs:p-6 shadow-lg dark:shadow-2xl dark:shadow-primary-500/10 hover:shadow-xl dark:hover:shadow-primary-500/20 transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-700 touch-manipulation ${volunteerAnimations[index].animationClasses}`}
               >
-                <div className="flex items-center mb-3">
-                  <div className="p-2 rounded-full bg-gray-100 dark:bg-dark-700 text-gray-600 dark:text-dark-300 mr-3">
+                <div className="flex items-start mb-3">
+                  <div className="p-2 rounded-full bg-gray-100 dark:bg-dark-700 text-gray-600 dark:text-dark-300 mr-3 shrink-0">
                     {exp.icon}
                   </div>
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    {exp.title}
-                  </h4>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-base xs:text-lg font-semibold text-gray-900 dark:text-white leading-tight">
+                      {exp.title}
+                    </h4>
+                  </div>
                 </div>
-                <p className="text-gray-600 dark:text-dark-300 mb-2">
+                <p className="text-sm xs:text-base text-gray-600 dark:text-dark-300 mb-2 leading-tight">
                   {exp.organization}
                 </p>
-                <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">
+                <span className="text-xs xs:text-sm text-primary-600 dark:text-primary-400 font-medium">
                   {exp.period}
                 </span>
               </div>
